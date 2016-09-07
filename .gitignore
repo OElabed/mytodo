@@ -1,7 +1,14 @@
 # Include your project-specific ignores in this file
 # Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
 
+# general
+.idea
+.DS_Store
+*~
+
+# package control
 node_modules/
 src/vendor/
-*.sw*
-*~
+
+# logs
+npm-debug.log

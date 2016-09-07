@@ -1,0 +1,32 @@
+<section id="todoapp">
+    <header id="header">
+        <h1>TodoList</h1>
+        <form action="#" id="todo-form">
+            <input type="text" id="new-todo" placeholder="Nouvelle tache" autofocus autocomplete="off" />
+        </form>
+    </header>
+    <section id="main">
+        <ul id="todo-list">
+            <li>
+                <div class="view">
+                    <input type="checkbox" class="toggle">
+                    <label>Faire qque chose 1</label>
+                    <button class="destroy"></button>
+                </div>
+            </li>
+            <li class="completed">
+                <div class="view">
+                    <input type="checkbox" class="toggle">
+                    <label>Faire qque chose 2</label>
+                    <button class="destroy"></button>
+                </div>
+                <form action="#">
+                    <input class="edit" value="Faire qque chose">
+                </form>
+            </li>
+        </ul>
+    </section>
+    <footer id="footer">
+        <span id="todo-count"><strong>5</strong> items left</span>
+    </footer>
+</section>

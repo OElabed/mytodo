@@ -1,9 +1,10 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="en" ng-controller="MainCtrl">
     <head>
+        <base href="/">
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>ToDo MVC</title>
+        <title ng-bind="pageTitle"></title>
         <meta name="description" content="Angular JS learn project">
         <meta name="author" content="OElabed">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,44 +22,16 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <section id="todoapp">
-            <header id="header">
-                <h1>TodoList</h1>
-                <form action="#" id="todo-form">
-                    <input type="text" id="new-todo" placeholder="Nouvelle tache" autofocus autocomplete="off"/>
-                </form>
-            </header>
-            <section id="main">
-                <ul id="todo-list">
-                    <li>
-                        <div class="view">
-                            <input type="checkbox" class="toggle">
-                            <label>Faire qque chose 1</label>
-                            <button class="destroy"></button>
-                        </div>
-                    </li>
-                    <li class="completed">
-                        <div class="view">
-                            <input type="checkbox" class="toggle">
-                            <label>Faire qque chose 2</label>
-                            <button class="destroy"></button>
-                        </div>
-                        <form action="#">
-                            <input class="edit" value="Faire qque chose">
-                        </form>
-                    </li>
-                </ul>
-            </section>
-            <footer id="footer">
-                <span id="todo-count"><strong>5</strong> items left</span>
-            </footer>
-        </section>
+        <div ui-view="main"></div>
 
-        <script src="vendor/todomvc-common/base.js"></script>
         <script src="vendor/jquery/dist/jquery.min.js"></script>
         <script src="vendor/angular/angular.min.js"></script>
+        <script src="vendor/angular-route/angular-route.min.js"></script>
+        <script src="vendor/angular-ui-router/release/angular-ui-router.min.js"></script>
+		<script src="vendor/angular-resource/angular-resource.min.js"></script>
         <script src="lib/plugins.js"></script>
         <script src="app/app.js"></script>
+        <script src="app/todo/todo.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <!--<script>
