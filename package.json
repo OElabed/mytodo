@@ -1,0 +1,22 @@
+{
+  "name": "mytodo",
+  "version": "1.0.0",
+  "description": "Angular JS learning application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OElabed/mytodo.git"
+  },
+  "keywords": [
+    "angularjs"
+  ],
+  "author": "OElabed",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/OElabed/mytodo/issues"
+  },
+  "homepage": "https://github.com/OElabed/mytodo#readme"
+}

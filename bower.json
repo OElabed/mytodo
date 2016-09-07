@@ -1,0 +1,19 @@
+{
+  "name": "mytodo",
+  "description": "Angular JS learning application",
+  "main": "index.js",
+  "authors": [
+    "OElabed"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "angularjs"
+  ],
+  "homepage": "https://github.com/OElabed/mytodo",
+  "private": true,
+  "devDependencies": {
+    "angular": "1.5.8",
+    "jquery": "^3.1.0"
+  },
+  "dependencies": {}
+}
