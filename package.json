@@ -18,5 +18,14 @@
   "bugs": {
     "url": "https://github.com/OElabed/mytodo/issues"
   },
-  "homepage": "https://github.com/OElabed/mytodo#readme"
+  "homepage": "https://github.com/OElabed/mytodo#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-connect": "^0.2.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-express-server": "^0.5.3",
+    "grunt-parallel": "^0.5.1",
+    "load-grunt-tasks": "^3.5.2"
+  }
 }
