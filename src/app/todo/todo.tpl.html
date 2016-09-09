@@ -1,26 +1,33 @@
 <section id="todoapp" ng-controller="TodoCtrl">
     <header id="header">
         <h1>TodoList</h1>
-        <form  id="todo-form" ng-submit="addTodo()">
-            <input type="text" id="new-todo" placeholder="Nouvelle tache" autofocus autocomplete="off" ng-model="newTodo"/>
+        <form id="todo-form" ng-submit="addTodo()">
+            <input type="text" id="new-todo" placeholder="Nouvelle tache" autofocus autocomplete="off" ng-model="newTodo" />
         </form>
     </header>
     <section id="main">
-        <input id="toggle-all" type="checkbox" ng-model="toggleAll" ng-change="toggleAllCompleted(toggleAll)">
+        <input id="toggle-all" type="checkbox" ng-model="toggleAll" ng-change="toggleAllCompleted(toggleAll)" ng-show="todos.length > <0>   </0>">
         <ul id="todo-list">
-            <li ng-repeat="todo in todos" ng-class="{completed : todo.completed}">
+            <li ng-repeat="todo in todos | filter: statusFilter | orderBy : 'completed':false" ng-class="{completed : todo.completed, editing: todo.editing}"
+                ng-dblclick="todo.editing = true">
                 <div class="view">
                     <input type="checkbox" class="toggle" ng-model="todo.completed" ng-change="toggleCompleted(todo)">
                     <label ng-dblclick="">{{todo.name}}</label>
                     <button class="destroy" ng-click="delete($index)"></button>
                 </div>
                 <form action="#">
-                    <input class="edit" value="Faire qque chose">
+                    <input class="edit" ng-model="todo.name" ng-blur="editTodo(todo)">
                 </form>
             </li>
         </ul>
     </section>
     <footer id="footer">
         <span id="todo-count"><strong>{{remaining}}</strong> items left</span>
+        <ul id="filters">
+            <li><a href="#" ng-class="{selected:filterAll}" ng-click="changeFilter(1)">All</a></li>
+            <li><a href="#" ng-class="{selected:filterActive}" ng-click="changeFilter(2)">Active</a></li>
+            <li><a href="#" ng-class="{selected:filterCompleted}" ng-click="changeFilter(3)">Completed</a></li>
+        </ul>
+        <button id="clear-completed" ng-show="completedCount" ng-click="clearCompleted()">Clear completed</button>
     </footer>
 </section>

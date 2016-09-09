@@ -7,14 +7,15 @@
 
   angular.module('app', [
     'ui.router',
-    'todo'
+    'todo',
+    'common.directives.ngBlur'
   ])
 
 
     .config(['$logProvider', '$stateProvider', '$urlRouterProvider', '$locationProvider', function ($logProvider, $stateProvider, $urlRouterProvider, $locationProvider) {
       $logProvider.debugEnabled(true);
       $urlRouterProvider.otherwise('/todo');
-      $locationProvider.html5Mode(true);
+      //$locationProvider.html5Mode(true);
     }])
 
     .controller('MainCtrl', ['$scope', function ($scope) {
