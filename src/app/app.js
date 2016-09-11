@@ -11,7 +11,7 @@
     'ui.router',
     
     //modules
-    'todo',
+    'app.todo',
     
     //directives
     'common.directives.ngBlur',

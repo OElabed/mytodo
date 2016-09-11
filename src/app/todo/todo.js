@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    angular.module('todo', ['ui.router'])
+    angular.module('app.todo', ['ui.router'])
         .config(['$stateProvider', '$locationProvider', function ($stateProvider, $locationProvider) {
             $stateProvider.state('todo', {
                 url: '/todo',
