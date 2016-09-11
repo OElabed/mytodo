@@ -6,7 +6,7 @@
         </form>
     </header>
     <section id="main">
-        <input id="toggle-all" type="checkbox" ng-model="toggleAll" ng-change="toggleAllCompleted(toggleAll)" ng-show="todos.length > <0>   </0>">
+        <input id="toggle-all" type="checkbox" ng-model="toggleAll" ng-change="toggleAllCompleted(toggleAll)" ng-show="todos.length > 0">
         <ul id="todo-list">
             <li ng-repeat="todo in todos | filter: statusFilter | orderBy : 'completed':false" ng-class="{completed : todo.completed, editing: todo.editing}"
                 ng-dblclick="todo.editing = true">

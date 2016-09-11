@@ -6,9 +6,18 @@
   });
 
   angular.module('app', [
+    
+    //external-tools
     'ui.router',
+    
+    //modules
     'todo',
-    'common.directives.ngBlur'
+    
+    //directives
+    'common.directives.ngBlur',
+    
+    //services
+    'common.services.todo'
   ])
 
 
